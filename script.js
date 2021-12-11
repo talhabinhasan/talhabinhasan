@@ -1,15 +1,6 @@
-$(document).ready(function() {
-    $(window).scroll(function() {
-        if(this.scrollY > 20) {
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-        }
-    });
-    //toggle menu/navbar script
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass('active');
-        $('.menu-btn').toggleClass('active');
-    });
-});
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+})

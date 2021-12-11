@@ -1,153 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Nunito&display=swap');
-* {
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+*{
     box-sizing: border-box;
 }
-
-body {
+body{
+    padding: 0px;
+    margin: 0px; 
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    align-items: center;
+    color: white;
+}
+.brand-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+.brand-title a{
+    margin: 5px;
+    font-family: "Jetbrains Mono", sans-serif;
+    font-size: 20px;
+}
+.navbar-links ul{
     margin: 0;
     padding: 0;
-}
-
-.navbar{
-    padding: auto;
-    position: fixed;
-    width: 100%;
-    font-family: 'Munito', sans-serif;
-}
-.navbar.sticky{
-    padding: 10px 0;
-    background: crimson;
-    transition: .5s ease-in;
-}
-.navbar.sticky .menu li a:hover{
-    color: black;
-}
-.navbar-max-width{
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
-}
-.navbar .navbar-max-width{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    font-family: "Jetbrains Mono", sans-serif;
 }
-.navbar .nav-name i{
-    font-size: 30px;
-    color: white;
-
-}
-.navbar .nav-name a{
-    color: white;
-    font-size: 35px;
-    font-weight: 600;
-    margin-top: 20px;
-    
-}
-.navbar .menu li {
+.navbar-links li{
     list-style: none;
-    display: inline-block;
 }
-.navbar .menu li a{
-    color: white;
-    font-size: 25px;
-    font-weight: 500;
-    margin-left: 25px;
+.navbar-links li a{
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: white;
+    padding: 1rem;
+    display: block;
+    transition: .4s ease;
 }
-.navbar .menu li a:hover{
+.navbar-links li a:hover{
     color: crimson;
 }
-/* menu btn design */
-.menu-btn{
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
     display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30px;
+    height: 21px;
 }
-
-.home{
-    display: flex;
-    background: url("images/banner.jpg") no-repeat center;
-    height: 100vh;
-    color: white;
-    min-width: 500px;
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
-.home .max-width{
-    margin: auto 0 auto 40px;
-
-}
-.home .home-content .text-1{
-    font-size: 25px;
-    font-family: 'Manrope', sans-serif;
-}
-.home .home-content .text-2{
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
-    font-family: 'Manrope', sans-serif;
-}
-.home .home-content .text-3{
-    font-size: 30px;
-    margin: 5px 0;
-    font-family: 'Manrope', sans-serif;
-}
-.home .home-content .text-3 .html{
-    color: #F06529;
-    font-family: 'Nunito', sans-serif;
-}
-.home .home-content .text-3 .css{
-    color: #e31b5f;
-    font-family: 'Nunito', sans-serif;
-}
-.home .home-content .text-3 .javascript{
-    color: #F0DB4F;
-    font-family: 'Nunito', sans-serif;
-}
-
-/* responsive media query */
-@media (max-width: 972px){
-    .max-width{
-        padding: 0 50px;
-        margin: 0px;
+@media (max-width: 600px){
+    .toggle-button{
+        display: flex;
     }
-    .home .max-width{
-        top: 500px;
-    }
-    .menu-btn{
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before{
-        content: "\f00d";
-    }
-    .navbar .menu{
-        margin: 0px;
-        padding: 0px;
-        left: 0px;
-        top: -1em;
-        position: fixed;
-        height: 100vh;
+    .navbar-links{
         width: 100%;
-        background: #111;
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links li{
         text-align: center;
-        padding-top: 80px;
-        transition: all .3s ease;
     }
-    .navbar .menu.active{
-        left: 100%;
+    .navbar-links li a{
+        padding: 1rem;
     }
-    .navbar .menu li{
-        display: block;
+    .navbar-links.active{
+        display: flex;
     }
-    .navbar .menu li a{
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
-    .navbar.sticky .menu li a:hover{
-        color: crimson;
-    }
+
 }
