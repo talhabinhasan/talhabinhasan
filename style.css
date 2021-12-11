@@ -4,15 +4,20 @@
 }
 body{
     padding: 0px;
-    margin: 0px; 
+    margin: 0px;
+    background-image: url(images/banner.jpg);
 }
+
 .navbar{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background: black;
     align-items: center;
     color: white;
 }
+
 .brand-title{
     font-size: 1.5rem;
     margin: .5rem;
@@ -37,9 +42,22 @@ body{
     padding: 1rem;
     display: block;
     transition: .4s ease;
+    font-size: 15px;
 }
 .navbar-links li a:hover{
     color: crimson;
+}
+#nav.sticky {
+  position: fixed;
+  box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.5);
+  background: crimson;
+}
+#nav.sticky ul li a {
+  font-size: 17px;
+  color: white;
+}
+#nav.sticky ul li a:hover{
+    color: black;
 }
 .toggle-button{
     position: absolute;
