@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Oswald&display=swap');
+@import url("style.css");
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-image: url(images/banner.jpg);
+}
+/* toggle button desiging */
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+/* brand title decoration*/
+.brand-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+.brand-title a{
+    margin-left: 5px;
+    font-family: "Jetbrains Mono", sans-serif;
+    font-size: 16px;
+}
+/* navbar decoration */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    align-items: center;
+    color: white;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.navbar-links{
+    width: 100%;
+    display: none;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: "Jetbrains Mono", sans-serif;
+    flex-direction: column;
+    width: 100%;
+}
+.navbar-links li{
+    list-style: none;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+    transition: .4s ease;
+    font-size: 15px;
+    text-align: center;
+}
+.navbar-links li a:hover{
+    color: crimson;
+}
+.navbar-links.active{
+    display: flex;
+}
+.navbar-links ul.active{
+    color: black;
+}
+
+/* landing page */
+
+.introduction{
+    padding: 0px;
+    margin: 32px 32px;
+    display: block;
+    color: white;
+}
+.introduction .first-text{
+    margin: 0px;
+    font-family: "Jetbrains", sans-serif;
+    font-weight: 100;
+    font-size: 6vh;
+}
+.introduction .second-text{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-family: "Jetbrains", sans-serif;
+    font-weight: 100;
+    font-size: 4vh;
+    color:rgba(255, 255, 255, 0.800);
+}
+.introduction .third-text{
+    margin: 0;
+    font-family: "Jetbrains", sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color:rgba(255, 255, 255, 0.800);
+}
+.btn-hire-me{
+    background-color: rgba(0, 255, 255, 0.800);
+    padding: 1rem;
+    border: 1px solid black;
+    margin-top: 16px;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.431) 0 2px 4px;
+    font-family: "Oswald", sans-serif;
+    width: 150px;
+    height: auto;
+}
+.btn-hire-me a{
+    font-size: 4vh;
+}
+.btn-hire-me:hover{
+    background: crimson;
+    color: white;
+}
