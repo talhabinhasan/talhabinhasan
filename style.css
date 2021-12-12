@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    padding: 0px;
+    padding: none;
     margin: 0px;
     background-image: url(images/banner.jpg);
 }
@@ -27,13 +27,13 @@ body{
 }
 /* brand title decoration*/
 .brand-title{
-    font-size: 1.5rem;
+    font-size: 32px;
     margin: .5rem;
 }
 .brand-title a{
     margin-left: 5px;
     font-family: "Jetbrains Mono", sans-serif;
-    font-size: 16px;
+    font-size: 28px;
 }
 /* navbar decoration */
 .navbar {
@@ -41,15 +41,17 @@ body{
     display: flex;
     justify-content: space-between;
     background: black;
-    align-items: center;
     color: white;
-    position: relative;
+    position: fixed;
+    top: 0;
     flex-direction: column;
     align-items: flex-start;
 }
 .navbar-links{
     width: 100%;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
 }
 .navbar-links ul{
     margin: 0;
@@ -75,13 +77,22 @@ body{
     color: crimson;
 }
 .navbar-links.active{
-    display: flex;
+    max-height: 200px;
+    position: relative;
 }
 .navbar-links ul.active{
     color: black;
 }
 
+
 /* landing page */
+section:first-of-type {
+    transition-duration: .5s;    
+}
+
+section.marginTop:not(.scrolled) {
+    margin-top: 275px;
+}
 
 .introduction{
     padding: 0px;
@@ -90,41 +101,61 @@ body{
     color: white;
 }
 .introduction .first-text{
-    margin: 0px;
-    font-family: "Jetbrains", sans-serif;
+    margin-top: 75px;
+    font-family: "Jetbrains Mono", sans-serif;
     font-weight: 100;
     font-size: 6vh;
+}
+.first-text a{
+    font-weight: bold;
 }
 .introduction .second-text{
     margin-top: 16px;
     margin-bottom: 16px;
-    font-family: "Jetbrains", sans-serif;
-    font-weight: 100;
+    font-family: "Jetbrains Mono", sans-serif;
+    font-weight: 600;
     font-size: 4vh;
     color:rgba(255, 255, 255, 0.800);
 }
 .introduction .third-text{
     margin: 0;
-    font-family: "Jetbrains", sans-serif;
-    font-weight: 100;
-    font-size: 1.5rem;
+    font-family: "Jetbrains Mono", sans-serif;
+    font-weight: 600;
+    font-size: 3vh;
     color:rgba(255, 255, 255, 0.800);
 }
 .btn-hire-me{
     background-color: rgba(0, 255, 255, 0.800);
     padding: 1rem;
     border: 1px solid black;
-    margin-top: 16px;
+    margin-top: 32px;
     border-radius: 8px;
     box-shadow: rgba(255, 255, 255, 0.431) 0 2px 4px;
-    font-family: "Oswald", sans-serif;
+    font-family: "Jetbrains Mono", sans-serif;
     width: 150px;
-    height: auto;
+    height: 75px;
+}
+.btn-hire-me img{
+    position: relative;
+    right: 6px;
+    height: 16px;
+    width: 16px;
 }
 .btn-hire-me a{
-    font-size: 4vh;
+    font-weight: bold;
+    font-size: 22px;
 }
+
 .btn-hire-me:hover{
     background: crimson;
     color: white;
+}
+/* my image */
+.my-image img{
+    display: block;
+    margin: auto;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 3px solid crimson;
 }
